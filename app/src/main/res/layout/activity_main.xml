@@ -7,119 +7,174 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!-- 1er ligne -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:text="The Questionnary"
-        android:textAlignment="center"
-        android:textSize="20sp" />
-
-    <!--  2 eme ligne (affiche ses enfants horizontalement) -->
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:background="#58B0F0"
+        android:orientation="horizontal"
+        android:padding="20dp">
 
-        <!-- Le label du switch -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="Est-ce que ça va ?"
-            android:textAlignment="center" />
+            android:text="Nouveau"
+            android:textColor="#FFFFFF" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Accueil"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rechercher"
+            android:textAlignment="textEnd"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+    <!-- Content-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Tweet -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-            <!-- Le Switch -->
-            <Switch
-                android:thumbTint="#FF0000"
-                android:layout_width="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!-- 1er ligne tweet-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                />
+                android:orientation="horizontal"
+                >
+                
+                <!--  Image Profil -->
+                <ImageView
+                    android:src="@drawable/test"
+                    android:layout_width="124dp"
+                    android:layout_height="124dp" />
+
+                <!-- A droite de l'image-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:orientation="vertical"
+                    >
+
+                    <!-- User -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:text="Gildas@chocolatine-nantes.fr"
+                        />
+
+                    <!-- Message -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        />
+
+                </LinearLayout>
+                
+            </LinearLayout>
+
+            <!-- Footer button tweet-->
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Répondre"
+                    android:textAlignment="center"
+                    android:textColor="#666666" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Retweet"
+                    android:textAlignment="center"
+                    android:textColor="#666666" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Favoris"
+                    android:textAlignment="center"
+                    android:textColor="#666666" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
     </LinearLayout>
 
-    <!--  3eme ligne -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:textSize="18sp"
-        android:text="Quel est ton niveau en Bilboquet"
-        android:textAlignment="center" />
-
-    <!--  4eme ligne -->
-    <SeekBar
-        android:layout_marginHorizontal="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <!--  5eme ligne -->
-    <TextView
-        android:paddingTop="40dp"
-        android:paddingBottom="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ton adresse mail ?"
-        android:textSize="16sp"
-        android:textAlignment="center" />
-
-    <!--  6eme ligne -->
-    <EditText
-        android:layout_margin="5dp"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:hint="Email" />
-
-    <!--  7eme ligne -->
+    <!-- Footer -->
     <LinearLayout
-        android:paddingTop="40dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:background="#E3E3E3"
+        android:orientation="horizontal"
+        android:padding="20dp">
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="OK" />
+            android:layout_weight="1"
+            android:text="Fil"
+            android:textAlignment="center"
+            android:textColor="#58B0F0" />
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="OK" />
-    </LinearLayout>
+            android:layout_weight="1"
+            android:text="Notification"
+            android:textAlignment="center"
+            android:textColor="#666666" />
 
-    <!--  8eme ligne -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal">
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="OK" />
+            android:layout_weight="1"
+            android:text="Messages"
+            android:textAlignment="center"
+            android:textColor="#666666" />
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="OK" />
+            android:layout_weight="1"
+            android:text="Moi"
+            android:textAlignment="center"
+            android:textColor="#666666" />
+
     </LinearLayout>
 
 </LinearLayout>
