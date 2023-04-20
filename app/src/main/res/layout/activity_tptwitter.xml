@@ -10,16 +10,19 @@
     <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:background="#58B0F0"
         android:orientation="horizontal"
         android:padding="20dp">
 
-        <TextView
+        <ImageButton
+            android:src="@drawable/pencil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#0000"
+            android:padding="5dp"
+            android:scaleType="centerInside"
             android:layout_weight="1"
-            android:text="Nouveau"
             android:textColor="#FFFFFF" />
 
         <TextView
@@ -27,16 +30,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Accueil"
+            android:layout_gravity="center_vertical"
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
 
-        <TextView
+        <ImageButton
+            android:src="@drawable/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Rechercher"
-            android:textAlignment="textEnd"
+            android:backgroundTint="#0000"
+            android:padding="5dp"
+            android:scaleType="centerInside"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>
@@ -45,8 +51,69 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:orientation="vertical"
         android:layout_weight="1">
 
+        <!-- Login Form-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:padding="15dp"
+                android:text="Connexion à Twitter"/>
+
+            <!-- Email-->
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email" />
+
+            <!-- Password-->
+            <EditText
+                android:id="@+id/edt_paswword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Password" />
+
+            <!-- Switch avec le label-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mémoriser mes informations" />
+            </LinearLayout>
+
+            <Button
+                android:backgroundTint="#58B0F0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Connexion"
+                android:onClick="onClickLogin"
+                />
+
+            <TextView
+                android:id="@+id/tv_form_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        
         <!-- Tweet -->
         <LinearLayout
             android:padding="10dp"
@@ -102,33 +169,35 @@
             <LinearLayout
                 android:padding="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="42dp"
                 >
 
-                <TextView
+                <ImageButton
+                    android:src="@drawable/reply"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Répondre"
-                    android:textAlignment="center"
-                    android:textColor="#666666" />
+                    android:backgroundTint="#0000"
+                    android:padding="0dp"
+                    android:scaleType="centerInside" />
 
-
-                <TextView
+                <ImageButton
+                    android:src="@drawable/retweet"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Retweet"
-                    android:textAlignment="center"
-                    android:textColor="#666666" />
+                    android:backgroundTint="#0000"
+                    android:padding="0dp"
+                    android:scaleType="centerInside" />
 
-                <TextView
+                <ImageButton
+                    android:src="@drawable/favorite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Favoris"
-                    android:textAlignment="center"
-                    android:textColor="#666666" />
+                    android:backgroundTint="#0000"
+                    android:padding="0dp"
+                    android:scaleType="centerInside" />
 
             </LinearLayout>
 
