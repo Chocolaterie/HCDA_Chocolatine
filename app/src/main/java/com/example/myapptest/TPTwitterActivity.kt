@@ -6,32 +6,30 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import com.example.myapptest.databinding.ActivityTptwitterBinding
 
 class TPTwitterActivity : AppCompatActivity() {
+
+    private lateinit var attd : ActivityTptwitterBinding;
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tptwitter)
 
+        attd = DataBindingUtil.setContentView<ActivityTptwitterBinding>(this, R.layout.activity_tptwitter)
     }
 
     // Que faire lors du clique sur le bouton Connexion
     fun onClickLogin(view: View) {
-        // Récupèrer les champs
-        val edtEmail = findViewById<EditText>(R.id.edt_email)
-        val edtPassword = findViewById<EditText>(R.id.edt_paswword)
-
-        // je récupère le text view
-        val tvFormMessage = findViewById<TextView>(R.id.tv_form_message)
-
         // Si au moins un champs est vide
-        if (edtEmail.text.isEmpty() || edtPassword.text.isEmpty()){
+        if (attd.edtEmail.text.isEmpty() || attd.edtPaswword.text.isEmpty()){
             //j'affiche un message
-            tvFormMessage.text = "Veuillez saisir tous les champs"
-            tvFormMessage.setTextColor(Color.parseColor("#FF0000"))
+            attd.tvFormMessage.text = "Veuillez saisir tous les champs"
+            attd.tvFormMessage.setTextColor(Color.parseColor("#FF0000"))
         }
         else {
             // j'affiche un message
-            tvFormMessage.text = "Saisies correctes"
+            attd.tvFormMessage.text = "Saisies correctes"
         }
     }
 }

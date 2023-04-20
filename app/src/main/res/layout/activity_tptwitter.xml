@@ -1,251 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".TPTwitterActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#58B0F0"
-        android:orientation="horizontal"
-        android:padding="20dp">
-
-        <ImageButton
-            android:src="@drawable/pencil"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#0000"
-            android:padding="5dp"
-            android:scaleType="centerInside"
-            android:layout_weight="1"
-            android:textColor="#FFFFFF" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Accueil"
-            android:layout_gravity="center_vertical"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF" />
-
-
-        <ImageButton
-            android:src="@drawable/search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#0000"
-            android:padding="5dp"
-            android:scaleType="centerInside"
-            android:textColor="#FFFFFF" />
-
-    </LinearLayout>
-
-    <!-- Content-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="1">
+        tools:context=".TPTwitterActivity">
 
-        <!-- Login Form-->
+        <!-- Header -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
-            
-            <TextView
-                android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#58B0F0"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#0000"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/pencil"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Accueil"
                 android:textAlignment="center"
-                android:padding="15dp"
-                android:text="Connexion à Twitter"/>
+                android:textColor="#FFFFFF" />
 
-            <!-- Email-->
-            <EditText
-                android:id="@+id/edt_email"
-                android:layout_width="match_parent"
+
+            <ImageButton
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Email" />
-
-            <!-- Password-->
-            <EditText
-                android:id="@+id/edt_paswword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:hint="Password" />
-
-            <!-- Switch avec le label-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <Switch
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mémoriser mes informations" />
-            </LinearLayout>
-
-            <Button
-                android:backgroundTint="#58B0F0"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="Connexion"
-                android:onClick="onClickLogin"
-                />
-
-            <TextView
-                android:id="@+id/tv_form_message"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_weight="1"
+                android:backgroundTint="#0000"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/search"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
-        
-        <!-- Tweet -->
-        <LinearLayout
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
 
-            <!-- 1er ligne tweet-->
+        <!-- Content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Login Form-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
+                android:orientation="vertical"
+                android:padding="10dp">
 
-                <!--  Image Profil -->
-                <ImageView
-                    android:src="@drawable/test"
-                    android:layout_width="124dp"
-                    android:layout_height="124dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Connexion à Twitter"
+                    android:textAlignment="center" />
 
-                <!-- A droite de l'image-->
+                <!-- Email-->
+                <EditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email" />
+
+                <!-- Password-->
+                <EditText
+                    android:id="@+id/edt_paswword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+                <!-- Switch avec le label-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mémoriser mes informations" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="#58B0F0"
+                    android:onClick="onClickLogin"
+                    android:text="Connexion" />
+
+                <TextView
+                    android:id="@+id/tv_form_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!-- Tweet -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- 1er ligne tweet-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="8dp"
-                    android:orientation="vertical"
-                    >
+                    android:orientation="horizontal">
 
-                    <!-- User -->
-                    <TextView
+                    <!--  Image Profil -->
+                    <ImageView
+                        android:layout_width="124dp"
+                        android:layout_height="124dp"
+                        android:src="@drawable/test" />
+
+                    <!-- A droite de l'image-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp">
+
+                        <!-- User -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Gildas@chocolatine-nantes.fr"
+                            android:textStyle="bold" />
+
+                        <!-- Message -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Footer button tweet-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:padding="10dp">
+
+                    <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:padding="5dp"
-                        android:textStyle="bold"
-                        android:text="Gildas@chocolatine-nantes.fr"
-                        />
+                        android:layout_weight="1"
+                        android:backgroundTint="#0000"
+                        android:padding="0dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/reply" />
 
-                    <!-- Message -->
-                    <TextView
+                    <ImageButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:maxLines="5"
-                        android:ellipsize="end"
-                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                        />
+                        android:layout_weight="1"
+                        android:backgroundTint="#0000"
+                        android:padding="0dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/retweet" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="#0000"
+                        android:padding="0dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/favorite" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
-            <!-- Footer button tweet-->
-            <LinearLayout
-                android:padding="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="42dp"
-                >
+        </LinearLayout>
 
-                <ImageButton
-                    android:src="@drawable/reply"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#0000"
-                    android:padding="0dp"
-                    android:scaleType="centerInside" />
+        <!-- Footer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E3E3E3"
+            android:orientation="horizontal"
+            android:padding="20dp">
 
-                <ImageButton
-                    android:src="@drawable/retweet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#0000"
-                    android:padding="0dp"
-                    android:scaleType="centerInside" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Fil"
+                android:textAlignment="center"
+                android:textColor="#58B0F0" />
 
-                <ImageButton
-                    android:src="@drawable/favorite"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#0000"
-                    android:padding="0dp"
-                    android:scaleType="centerInside" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Notification"
+                android:textAlignment="center"
+                android:textColor="#666666" />
 
-            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Messages"
+                android:textAlignment="center"
+                android:textColor="#666666" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Moi"
+                android:textAlignment="center"
+                android:textColor="#666666" />
 
         </LinearLayout>
 
     </LinearLayout>
-
-    <!-- Footer -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#E3E3E3"
-        android:orientation="horizontal"
-        android:padding="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Fil"
-            android:textAlignment="center"
-            android:textColor="#58B0F0" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Notification"
-            android:textAlignment="center"
-            android:textColor="#666666" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Messages"
-            android:textAlignment="center"
-            android:textColor="#666666" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Moi"
-            android:textAlignment="center"
-            android:textColor="#666666" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</layout>
