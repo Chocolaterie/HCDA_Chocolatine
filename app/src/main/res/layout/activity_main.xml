@@ -22,6 +22,12 @@
             android:text="@{person.firstname}"
             />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Activity"
+            android:onClick="onClickNewActivity"/>
+
     </LinearLayout>
 
 

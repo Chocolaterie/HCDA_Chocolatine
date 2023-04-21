@@ -1,5 +1,6 @@
 package com.example.myapptest
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import com.example.myapptest.databinding.ActivityTptwitterBinding
+import com.example.myapptest.entity.Person
 
 class TPTwitterActivity : AppCompatActivity() {
 

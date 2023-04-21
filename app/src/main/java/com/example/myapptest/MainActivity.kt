@@ -1,5 +1,6 @@
 package com.example.myapptest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,5 +23,12 @@ class MainActivity : AppCompatActivity() {
         // Transférer une personne dans la vue DataBindé
         amd.person = Person("Gildas")
 
+    }
+
+    fun onClickNewActivity(view: View) {
+        // Preparer l'action de lancer une nouvelle activité
+        val intent = Intent(this, TPTwitterActivity::class.java)
+        // Lancer/Executer l'action pour ouvrir une nouvelle activité
+        startActivity(intent)
     }
 }
