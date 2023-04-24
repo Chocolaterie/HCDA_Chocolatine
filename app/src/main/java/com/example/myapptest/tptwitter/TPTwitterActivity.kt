@@ -1,15 +1,12 @@
-package com.example.myapptest
+package com.example.myapptest.tptwitter
 
-import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
+import com.example.myapptest.R
 import com.example.myapptest.databinding.ActivityTptwitterBinding
-import com.example.myapptest.entity.Person
 
 class TPTwitterActivity : AppCompatActivity() {
 
@@ -18,7 +15,9 @@ class TPTwitterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        attd = DataBindingUtil.setContentView<ActivityTptwitterBinding>(this, R.layout.activity_tptwitter)
+        attd = DataBindingUtil.setContentView<ActivityTptwitterBinding>(this,
+            R.layout.activity_tptwitter
+        )
 
 
     }
