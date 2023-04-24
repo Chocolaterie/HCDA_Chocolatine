@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph_twitter">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_twitter"
+    app:startDestination="@id/loginTwitterFragment">
 
+    <fragment
+        android:id="@+id/loginTwitterFragment"
+        android:name="com.example.myapptest.tptwitter.LoginTwitterFragment"
+        android:label="LoginTwitterFragment" >
+        <action
+            android:id="@+id/action_loginTwitterFragment_to_listTwitterFragment"
+            app:destination="@id/listTwitterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listTwitterFragment"
+        android:name="com.example.myapptest.tptwitter.ListTwitterFragment"
+        android:label="fragment_list_twitter"
+        tools:layout="@layout/fragment_list_twitter" />
 </navigation>
