@@ -19,6 +19,8 @@ class TPTwitterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         attd = DataBindingUtil.setContentView<ActivityTptwitterBinding>(this, R.layout.activity_tptwitter)
+
+
     }
 
     // Que faire lors du clique sur le bouton Connexion
