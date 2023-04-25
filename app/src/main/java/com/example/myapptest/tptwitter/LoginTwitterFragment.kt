@@ -31,21 +31,11 @@ class LoginTwitterFragment : Fragment() {
         // Vue du fragment en version data binding dans une variable
         val binding = DataBindingUtil.inflate<FragmentLoginTwitterBinding>(inflater, R.layout.fragment_login_twitter, container, false)
 
-        // Que faire lors du clique du bouton
-        binding.btnLogin.setOnClickListener {
-            // Si au moins un champs est vide
-            if (binding.edtEmail.text.isEmpty() || binding.edtPaswword.text.isEmpty()){
-                //j'affiche un message
-                binding.tvFormMessage.text = "Veuillez saisir tous les champs"
-                binding.tvFormMessage.setTextColor(Color.parseColor("#FF0000"))
-            }
-            else {
-                // j'affiche un message
-                binding.tvFormMessage.text = "Saisies correctes"
-                // naviguer de login fragment à list fragment
-                findNavController().navigate(R.id.action_loginTwitterFragment_to_listTwitterFragment)
-            }
-        }
+        // Instancier/Charger le view model TwitterLoginViewModel
+        val twitterLoginViewModel = TwitterLoginViewModel()
+
+        // Mettre le vue model dans la vue
+        binding.twitterViewModel = twitterLoginViewModel
 
         // Obligatoire retourner le root de la vue version DataBinding sinon page blanche
         return binding.root

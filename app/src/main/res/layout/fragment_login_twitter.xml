@@ -2,6 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="twitterViewModel"
+            type="com.example.myapptest.tptwitter.TwitterLoginViewModel" />
+    </data>
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,9 +29,9 @@
 
             <!-- Email-->
             <EditText
-                android:id="@+id/edt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={twitterViewModel.emailField}"
                 android:hint="Email" />
 
             <!-- Password-->
@@ -57,13 +63,15 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:backgroundTint="#58B0F0"
+                android:onClick="@{() -> twitterViewModel.validateLogin()}"
                 android:text="Connexion" />
 
             <!-- Error -->
             <TextView
                 android:id="@+id/tv_form_message"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="@{twitterViewModel.errorMessage}" />
 
         </LinearLayout>
 

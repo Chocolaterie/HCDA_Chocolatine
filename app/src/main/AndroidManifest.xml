@@ -15,11 +15,6 @@
         <activity
             android:name=".demomoyenneviewmodel.DemoMoyenneVMActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".demonavfragment.DemoNavigationActivity"
@@ -33,6 +28,11 @@
         <activity
             android:name=".tptwitter.TPTwitterActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".TP2Activity"
