@@ -30,9 +30,11 @@ class TwitterLoginViewModel : ViewModel() {
 
     fun validateLogin(){
         // Si au moins un champs est vide
-        if (emailField.value.isNullOrEmpty() && passwordField.value.isNullOrEmpty()){
+        if (emailField.value.isNullOrEmpty() && passwordField.value.isNullOrEmpty() && !loginSuccess.value!! ){
             // j'affiche un message
             errorMessage = "Veuillez saisir tous les champs"
+
+            colorMessage = Color.parseColor("#0000FF");
 
             // Error login
             loginSuccess.value = false
