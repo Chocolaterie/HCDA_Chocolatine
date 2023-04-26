@@ -12,7 +12,7 @@ class TwitterLoginViewModel : ViewModel() {
     var refreshUI = MutableLiveData<Boolean>();
 
     // Savoir quand le connexion est valide
-    var loginSuccess = MutableLiveData<Boolean>(false);
+    var loginIsValid = MutableLiveData<Boolean>(false);
 
     // Contient message erreur
     var errorMessage = ""
@@ -21,7 +21,7 @@ class TwitterLoginViewModel : ViewModel() {
     var emailField = MutableLiveData<String>()
     var passwordField = MutableLiveData<String>()
 
-    var colorMessage = Color.parseColor("#FF0000");
+    var colorMessage = Color.parseColor("#FF2222");
 
     fun forceRefreshUI(){
         // Forcer à appeler l'evenement
@@ -30,22 +30,16 @@ class TwitterLoginViewModel : ViewModel() {
 
     fun validateLogin(){
         // Si au moins un champs est vide
-        if (emailField.value.isNullOrEmpty() && passwordField.value.isNullOrEmpty()){
+        if (emailField.value.isNullOrEmpty()){
             // j'affiche un message
             errorMessage = "Veuillez saisir tous les champs"
-
-            // Error login
-            loginSuccess.value = false
         }
         else {
             // j'affiche un message
             errorMessage = "Saisies correctes"
 
-            // En vert
-            colorMessage = Color.parseColor("#00FF00");
-
             // Ok login success
-            loginSuccess.value = true
+            loginIsValid.value = true
         }
 
         // Dans tout les cas refresh l'interface
