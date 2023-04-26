@@ -44,7 +44,7 @@ class LoginTwitterFragment : Fragment() {
         })
 
         // Ecouter le résultat de la connexion
-        twitterLoginViewModel.loginIsValid.observe(viewLifecycleOwner, {
+        twitterLoginViewModel.loginSuccess.observe(viewLifecycleOwner, {
             // Si login success true
             if (it){
                 // naviguer de login fragment à list fragment
