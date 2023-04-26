@@ -37,6 +37,21 @@ class LoginTwitterFragment : Fragment() {
         // Mettre le vue model dans la vue
         binding.twitterViewModel = twitterLoginViewModel
 
+        // Refraichir l'interface quand y'a un changement
+        twitterLoginViewModel.refreshUI.observe(viewLifecycleOwner, {
+            // Mettre le vue model dans la vue
+            binding.twitterViewModel = twitterLoginViewModel
+        })
+
+        // Ecouter le résultat de la connexion
+        twitterLoginViewModel.loginSuccess.observe(viewLifecycleOwner, {
+            // Si login success true
+            if (it){
+                // naviguer de login fragment à list fragment
+                findNavController().navigate(R.id.action_loginTwitterFragment_to_listTwitterFragment)
+            }
+        })
+
         // Obligatoire retourner le root de la vue version DataBinding sinon page blanche
         return binding.root
     }

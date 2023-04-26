@@ -39,6 +39,7 @@
                 android:id="@+id/edt_paswword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={twitterViewModel.passwordField}"
                 android:hint="Password"
                 android:inputType="textPassword" />
 
@@ -71,6 +72,7 @@
                 android:id="@+id/tv_form_message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@{twitterViewModel.colorMessage}"
                 android:text="@{twitterViewModel.errorMessage}" />
 
         </LinearLayout>
