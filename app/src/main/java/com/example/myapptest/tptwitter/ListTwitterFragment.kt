@@ -1,5 +1,7 @@
 package com.example.myapptest.tptwitter
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -22,6 +24,17 @@ class ListTwitterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        // Afficher une popup
+        val builder = AlertDialog.Builder(context)
+
+        with(builder)
+        {
+            setTitle("Information")
+            setMessage("You are logged")
+            show()
+        }
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_list_twitter, container, false)
     }
