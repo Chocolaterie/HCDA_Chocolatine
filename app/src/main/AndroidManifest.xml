@@ -13,26 +13,29 @@
         android:theme="@style/Theme.MyAppTest"
         tools:targetApi="31">
         <activity
-            android:name=".demomoyenneviewmodel.DemoMoyenneVMActivity"
-            android:exported="true" >
-        </activity>
-        <activity
-            android:name=".demonavfragment.DemoNavigationActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".demonav.DemoNavTwoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".demonav.DemoNavOneActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".tptwitter.TPTwitterActivity"
+            android:name=".demorecyclerview.DemoRecyclerViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".demomoyenneviewmodel.DemoMoyenneVMActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".demonavfragment.DemoNavigationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".demonav.DemoNavTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demonav.DemoNavOneActivity"
+            android:exported="true" />
+        <activity
+            android:name=".tptwitter.TPTwitterActivity"
+            android:exported="true">
         </activity>
         <activity
             android:name=".TP2Activity"
