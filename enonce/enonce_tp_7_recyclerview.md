@@ -21,6 +21,10 @@ Pour les données elles sont identiques (donc un for de 0 à 20 avec les mêmes 
 -  Dans le **Fragment** connecter l'adapteur au **RecyclerView** et envoyer les données bouchonnées dans l'adapteur
 - Finalement on remarque que le xml du fragment en question se limitera à un **RecyclerView** encapsulé dans son **FrameLayout** puisqu'on aura déplacé tout le bloque du **Tweet** dans un fichier à part (le fichier pour définir la ligne du Tweet)
 
+### ATTENTION 
+
+#### Activer le data binding dans le Fragment (comme pour le Fragment Login)
+
 ### Resumé
 
 C'est un copié collé de la Démo (pas tout les fichiers bien sûr) mais en adaptant le modèle de données et en appliquant le concept dans le Fragment qui affichait le bloc du **Tweet**
