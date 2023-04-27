@@ -13,7 +13,7 @@ Pour les données elles sont identiques (donc un for de 0 à 20 avec les mêmes 
     - Deplacer le **LinearLayout** qui correspond à un Tweet dans ce fichier
     - Remplacer les textes en dur par les variables du model **Tweet** : 
     ```kt
-    android:text="{@tweet.message}"
+    android:text="@{tweet.message}"
     ```
 
 - Le **RecyclerView** sera dans le Fragment qui affichait le bloc du Tweet
