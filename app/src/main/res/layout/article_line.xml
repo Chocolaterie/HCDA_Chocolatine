@@ -10,13 +10,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#B4E8DB"
+        android:padding="10dp"
         android:orientation="horizontal">
 
         <!-- Article - Id -->
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:text="@{article.id}"
+            android:textStyle="bold"
+            android:text="@{String.valueOf(article.id)}"
             />
 
         <!-- Article - Title -->
